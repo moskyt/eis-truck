@@ -19,4 +19,10 @@ https://www.laskakit.cz/nabijecka-li-ion-clanku-tp4056-s-ochranou-microusb/
 
 bzucak: pasivni 3.3V + aktivni (5V ?)
 
+## UX
 
+Aktualni verze na prilozeni cipu s ovocem nakresli obrazek a zapne svetla v odpovidajici barve, na druhe prilozeni tehoz cipu svetla vypne.
+
+Cip s lodickou prehraje svetelne-akustickou sekvenci.
+
+Pristupny microUSB konektor neni pro arduino, ale jen pro nabijeni -- je to konektor nabijecky. Pro preflashovani arduina je treba otevrit strechu a arduino z patice vytahnout a pripojit k pocitaci.
