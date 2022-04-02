@@ -6,13 +6,13 @@ const int melodyLength2 = 12;
 const int melodyLength[melodyCount] = {melodyLength1, melodyLength2};
 
 int melody1[melodyLength1] = {
-  NOTE_G2, NOTE_G2, NOTE_E2, NOTE_C2, NOTE_A2, NOTE_A2, NOTE_G2,
-  NOTE_F2, NOTE_F2, NOTE_E2, NOTE_E2, NOTE_D2, NOTE_G2, NOTE_C2
+  NOTE_G4, NOTE_G4, NOTE_E4, NOTE_C4, NOTE_A4, NOTE_A4, NOTE_G4,
+  NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_G4, NOTE_C4
 };
 
 int melody2[melodyLength2] = {
-  NOTE_C3, NOTE_C3, NOTE_C3, NOTE_G2, NOTE_A2, NOTE_A2, NOTE_G2,
-  NOTE_E3, NOTE_E3, NOTE_D3, NOTE_D3, NOTE_C3
+  NOTE_C5, NOTE_C5, NOTE_C5, NOTE_G4, NOTE_A4, NOTE_A4, NOTE_G4,
+  NOTE_E5, NOTE_E5, NOTE_D5, NOTE_D5, NOTE_C5
 };
 
 int noteDurations1[melodyLength1] = {
