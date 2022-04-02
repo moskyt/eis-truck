@@ -9,6 +9,7 @@
 #include <MFRC522Debug.h>
 
 #include "pitches.h"
+#include "melody.h"
 
 // list of tags
 const unsigned long uids[4] = { 0x653A703, 0x91E12526, 0x7D2BA603, 0xF2CCE61A};
@@ -39,6 +40,8 @@ Adafruit_NeoPixel pixels(2, NEO_PIN, NEO_RGB + NEO_KHZ800);
 
 unsigned short int rr, gg, bb;
 bool lights = false;
+
+int current_melody = 0;
 
 unsigned long last_uid = 0;
 unsigned long last_read = 0;
@@ -84,6 +87,7 @@ void setup()
 
   Serial.println(F("Init done."));
 
+  setupMelodyPointers();
 }
 
 void beep() {
@@ -114,7 +118,8 @@ void loop() {
 
     int bmap = -1;
     if (uid == uids[0]) {
-      playMelody();
+      playMelody(current_melody);
+      current_melody = (current_melody + 1) % melodyCount;
       headlights(150,150,150);
     } else 
     if (uid == uids[1]) { // cherry

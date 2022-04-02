@@ -1,23 +1,10 @@
-
-const int melodyLength = 14;
-
-const int melody[melodyLength] = {
-  NOTE_G2, NOTE_G2, NOTE_E2, NOTE_C2, NOTE_A2, NOTE_A2, NOTE_G2,
-  NOTE_F2, NOTE_F2, NOTE_E2, NOTE_E2, NOTE_D2, NOTE_A2, NOTE_C2
-};
-
-const int noteDurations[melodyLength] = {
-  4, 4, 4, 4, 4, 4, 2,
-  4, 4, 4, 4, 4, 4, 2
-};
-
-void playMelody() {
+void playMelody(int n) {
   // iterate over the notes of the melody:
-  for (int thisNote = 0; thisNote < melodyLength; thisNote++) {
+  for (int thisNote = 0; thisNote < melodyLength[n]; thisNote++) {
 
-    int noteDuration = 1300 / noteDurations[thisNote];
-    tone(TONE_PIN, melody[thisNote], noteDuration);
-
+    int noteDuration = 1300 / noteDurations[n][thisNote];
+    tone(TONE_PIN, melody[n][thisNote], noteDuration);
+    
     if (thisNote % 2 == 0)
       headlights(255,0,0);
     else
@@ -28,4 +15,11 @@ void playMelody() {
     // stop the tone playing:
     noTone(TONE_PIN);
   }
+}
+
+void setupMelodyPointers() {
+  noteDurations[0] = noteDurations1;
+  noteDurations[1] = noteDurations2;
+  melody[0] = melody1;
+  melody[1] = melody2;
 }
