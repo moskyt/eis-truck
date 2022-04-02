@@ -17,7 +17,10 @@ https://www.laskakit.cz/baterie-li-po-3-7v-1500mah-lipo/
 nabijecka: TP4056
 https://www.laskakit.cz/nabijecka-li-ion-clanku-tp4056-s-ochranou-microusb/
 
-bzucak: pasivni 3.3V + aktivni (5V ?)
+bzucak: aktivni 3.3V + pasivni (5V ?)
+
+svetla: 2x 8mm neopixel 
+https://www.laskakit.cz/inteligentni-rgb-led-neopixel-ws2812--8mm--5v/
 
 ## UX
 
