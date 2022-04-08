@@ -12,7 +12,7 @@
 #include "melody.h"
 
 // list of tags
-const unsigned long uids[4] = { 0x653A703, 0x91E12526, 0x7D2BA603, 0xF2CCE61A};
+const unsigned long uids[5] = { 0x653A703, 0x91E12526, 0x7D2BA603, 0xF2CCE61A, 0xE0901B21 };
 
 // pin assignment
 const int BEEP_PIN = 19;
@@ -40,8 +40,6 @@ Adafruit_NeoPixel pixels(2, NEO_PIN, NEO_RGB + NEO_KHZ800);
 
 unsigned short int rr, gg, bb;
 bool lights = false;
-
-int current_melody = 0;
 
 unsigned long last_uid = 0;
 unsigned long last_read = 0;
@@ -117,9 +115,12 @@ void loop() {
     Serial.println(uid,HEX); 
 
     int bmap = -1;
-    if (uid == uids[0]) {
-      playMelody(current_melody);
-      current_melody = (current_melody + 1) % melodyCount;
+    if (uid == uids[0]) { // schiffli
+      playMelody(0);
+      headlights(150,150,150);
+    } else 
+    if (uid == uids[4]) { // old mc donalds
+      playMelody(1);
       headlights(150,150,150);
     } else 
     if (uid == uids[1]) { // cherry
