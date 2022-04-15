@@ -22,10 +22,10 @@ const int NEO_PIN = 21;
 const int RFID_RESET_PIN = 10;
 const int RFID_CS_PIN = 9;
 
-const int EPD_CS_PIN = 5;
-const int EPD_DC_PIN = 4;
-const int EPD_RST_PIN = 3;
-const int EPD_BUSY_PIN = 2;
+const int EPD_CS_PIN = 6;
+const int EPD_DC_PIN = 5;
+const int EPD_RST_PIN = 4;
+const int EPD_BUSY_PIN = 3;
 
 // e-paper display
 GxEPD2_BW<GxEPD2_154, 200> display(GxEPD2_154(EPD_CS_PIN, EPD_DC_PIN, EPD_RST_PIN, EPD_BUSY_PIN));
